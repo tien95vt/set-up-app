@@ -1,11 +1,11 @@
 import React from 'react';
 
-import styles from './Test1.module.scss';
+import styles from './Route1.module.scss';
 import { Button } from "react-bootstrap";
 
-const test1 = () => {
+const route1 = () => {
   return (
-    <div className={styles.Test1}>
+    <div className={styles.Route1}>
       <div className={styles.FunTest1}>Fun Test 1</div>
       <h1>Test 1 component</h1>
       <Button variant="primary">Primary</Button>
@@ -14,4 +14,4 @@ const test1 = () => {
   );
 };
 
-export default test1;
+export default route1;
