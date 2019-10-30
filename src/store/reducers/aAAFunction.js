@@ -2,7 +2,10 @@ import * as actionTypes from '../actions/actionTypes';
 
 const initState = {
   a1: 1,
-  a2: 2
+  a2: 2,
+  data: null,
+  err: false,
+  loading: false
 };
 
 const reducer = (state = initState, action) => {
@@ -16,6 +19,21 @@ const reducer = (state = initState, action) => {
       return {
         ...state,
         a2: state.a2 - 10
+      };
+    case actionTypes.GET_USER_START:
+      return {
+        ...state,
+        loading: true
+      };
+    case actionTypes.GET_USER_SUCCESS:
+      return {
+        ...state,
+        data: action.data
+      };
+    case actionTypes.GET_USER_FAIL:
+      return {
+        ...state,
+        err: true
       };
     default:
       return state;

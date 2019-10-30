@@ -1,10 +1,10 @@
 import React, { Component } from "react";
 import { Button } from 'react-bootstrap';
-import axios from 'axios';
+import axios from '../../axios' ;
 
 class Route2 extends Component {
   getPost() {
-    axios.get('https://jsonplaceholder.typicode.com/todos/1')
+    axios.get('/users')
       .then(response => console.log(response.data));
   }
 
@@ -12,7 +12,7 @@ class Route2 extends Component {
     return (
       <div>
         <div>Test 2</div>
-        <Button variant="success" onClick={this.getPost}>Get Post</Button>
+        <Button variant="success" onClick={this.getPost}>Get User</Button>
       </div>
     );
   }
